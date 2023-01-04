@@ -1,0 +1,21 @@
+src/test/java
+	pageobjects
+	testcases
+	testdata
+	utils
+configurations
+logs
+screenshots
+
+
+phase 1 : implementation
+-create maven project
+-update pom.xml
+-create page objects
+-create testcases
+-add logs 
+-read common properties values from properties file
+-run test case on desired browser
+-add extent report
+-create data driven test case
+add new test case

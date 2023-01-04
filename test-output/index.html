@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\ShubhamSadhu\AppData\Local\Temp\testng-eclipse-1675219610\testng-customsuite.xml</span>
+                    <span>C:\Users\ShubhamSadhu\AppData\Local\Temp\testng-eclipse--1967497412\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +104,22 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testCases.LoginTest" class="method navigator-link" hash-for-method="loginTestCase">loginTestCase</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testCases.LoginTest" class="method navigator-link" hash-for-method="TestWithEmpty">TestWithEmpty</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testCases.LoginTest" class="method navigator-link" hash-for-method="verifyTitleofLandingPage">verifyTitleofLandingPage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testCases.LoginTest" class="method navigator-link" hash-for-method="TestWithInvalidData">TestWithInvalidData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testCases.LoginTest" class="method navigator-link" hash-for-method="TestWithValidData">TestWithValidData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testCases.LoginTest" class="method navigator-link" hash-for-method="TestWithValidPassword">TestWithValidPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -132,16 +142,30 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginTestCase">
-                  </a> <!-- loginTestCase -->
-                  <span class="method-name">loginTestCase</span>
+                  <a name="TestWithEmpty">
+                  </a> <!-- TestWithEmpty -->
+                  <span class="method-name">TestWithEmpty</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyTitleofLandingPage">
-                  </a> <!-- verifyTitleofLandingPage -->
-                  <span class="method-name">verifyTitleofLandingPage</span>
+                  <a name="TestWithInvalidData">
+                  </a> <!-- TestWithInvalidData -->
+                  <span class="method-name">TestWithInvalidData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestWithValidData">
+                  </a> <!-- TestWithValidData -->
+                  <span class="method-name">TestWithValidData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestWithValidPassword">
+                  </a> <!-- TestWithValidPassword -->
+                  <span class="method-name">TestWithValidPassword</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -149,7 +173,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ShubhamSadhu\AppData\Local\Temp\testng-eclipse-1675219610\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ShubhamSadhu\AppData\Local\Temp\testng-eclipse--1967497412\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -198,20 +222,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginTestCase')
+data.setCell(0, 1, 'TestWithValidData')
 data.setCell(0, 2, 'testCases.LoginTest')
-data.setCell(0, 3, 559);
+data.setCell(0, 3, 410);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyTitleofLandingPage')
+data.setCell(1, 1, 'TestWithEmpty')
 data.setCell(1, 2, 'testCases.LoginTest')
-data.setCell(1, 3, 116);
+data.setCell(1, 3, 321);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TestWithValidPassword')
+data.setCell(2, 2, 'testCases.LoginTest')
+data.setCell(2, 3, 314);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'TestWithInvalidData')
+data.setCell(3, 2, 'testCases.LoginTest')
+data.setCell(3, 3, 301);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 675 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -242,17 +274,41 @@ return data;
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
+              <div class="configuration-method before">
                 <span class="method-name">loginTestCase</span>
-                <span class="method-start">5156 ms</span>
-              </div> <!-- test-method -->
+                <span class="method-start">3317 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyTitleofLandingPage</span>
-                <span class="method-start">5731 ms</span>
+                <span class="method-name">TestWithEmpty</span>
+                <span class="method-start">5294 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">loginTestCase</span>
+                <span class="method-start">5622 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TestWithInvalidData</span>
+                <span class="method-start">5892 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">loginTestCase</span>
+                <span class="method-start">6196 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TestWithValidData</span>
+                <span class="method-start">6761 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">loginTestCase</span>
+                <span class="method-start">7174 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TestWithValidPassword</span>
+                <span class="method-start">7373 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">Teardown</span>
-                <span class="method-start">5850 ms</span>
+                <span class="method-start">7692 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

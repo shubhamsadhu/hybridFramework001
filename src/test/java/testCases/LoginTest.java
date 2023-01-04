@@ -1,29 +1,33 @@
 package testCases;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import pageObjects.LoginPage;
 
 public class LoginTest extends BaseClass {
-	
-	
-	
-	@Test
-	public  void loginTestCase() {
-		LoginPage loginPage = new LoginPage();
-		loginPage.testlogin(email, password);
-	}
-	
-	@Test
-	public void verifyTitleofLandingPage() {
-		if(driver.getTitle().equals("Swag Labs")) {
-			Assert.assertTrue(true);
-			System.out.println(driver.getCurrentUrl());
-		}else {
-			System.out.println("title is wrong");
-			Assert.assertTrue(false);
-		}
-	}
+//	 LoginPage loginPage = new LoginPage();
+//	
 
+
+	@Test
+	public void TestWithValidData() throws InterruptedException {
+	 
+	  loginPage.testlogin(email, password);
+	  
+	}
+	
+	@Test
+	public void TestWithInvalidData() throws InterruptedException {
+		loginPage.testlogin("souare", "133443");
+		
+	}
+	
+	@Test
+	public void TestWithEmpty() throws InterruptedException {
+		loginPage.testlogin("","");
+	}
+	
+	@Test
+	public void TestWithValidPassword() throws InterruptedException {
+		loginPage.testlogin(email, "24332");
+	}
 }
