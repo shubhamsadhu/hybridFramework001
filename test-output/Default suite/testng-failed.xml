@@ -5,9 +5,8 @@
     <classes>
       <class name="testCases.LoginTest">
         <methods>
-          <include name="loginTestCase"/>
           <include name="setup"/>
-          <include name="TestWithValidData"/>
+          <include name="starttest"/>
           <include name="TestWithValidPassword"/>
           <include name="TestWithInvalidData"/>
           <include name="TestWithEmpty"/>

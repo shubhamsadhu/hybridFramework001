@@ -10,10 +10,13 @@ public class AddHighPriceItem extends BaseClass {
 	//create object
 	selectdropdown selectdropdownpage;
 	
+	@Test(priority = 1)
+	public void initialize() throws InterruptedException {
+		loginTestCase();
+	}
 	
-	
-	@Test(enabled = false)
-	public void verifyTitleofLandingPage(){
+	@Test()
+	public void selectDropdown() throws InterruptedException {
 		if(driver.getTitle().equals("Swag Labs")) {
 			Assert.assertTrue(true);
 			System.out.println(driver.getCurrentUrl());
@@ -21,14 +24,11 @@ public class AddHighPriceItem extends BaseClass {
 			System.out.println("title is wrong");
 			Assert.assertTrue(false);
 		}
-	}
-	
-	@Test()
-	public void selectDropdown() throws InterruptedException {
 		selectdropdownpage = new selectdropdown();
 		selectdropdownpage.selectDropdown();
 		selectdropdownpage.selectHighPriceItem();
 		System.out.println("Item is selected");
+		
 	}
 	
 
