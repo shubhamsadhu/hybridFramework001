@@ -39,7 +39,7 @@ public class BaseClass {
 		}
 		driver.get(baseurl);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		
 	}
 	

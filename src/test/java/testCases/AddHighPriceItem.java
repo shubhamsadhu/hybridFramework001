@@ -1,19 +1,23 @@
 package testCases;
 
 import org.testng.Assert;
+
 import org.testng.annotations.Test;
 
+import pageObjects.ItemDetailsPage;
 import pageObjects.selectdropdown;
 
 
 public class AddHighPriceItem extends BaseClass {
 	//create object
-	selectdropdown selectdropdownpage;
+   selectdropdown selectdropdownpage;
+   ItemDetailsPage itemDetailsPage;
 	
-	@Test(priority = 1)
-	public void initialize() throws InterruptedException {
+	@Test()
+	private void performlogin() throws InterruptedException {
 		loginTestCase();
 	}
+	
 	
 	@Test()
 	public void selectDropdown() throws InterruptedException {
@@ -27,9 +31,19 @@ public class AddHighPriceItem extends BaseClass {
 		selectdropdownpage = new selectdropdown();
 		selectdropdownpage.selectDropdown();
 		selectdropdownpage.selectHighPriceItem();
-		System.out.println("Item is selected");
+		System.out.println(driver.getCurrentUrl());
+//		driver.navigate().back();
+		
 		
 	}
+	
+	@Test
+	public void Addtocart() {
+		itemDetailsPage = new ItemDetailsPage();
+		itemDetailsPage.AddtoCart();
+		
+	}
+	
 	
 
 }
