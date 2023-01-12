@@ -1,22 +1,27 @@
 package testCases;
 
+
+
 import org.testng.Assert;
 
 import org.testng.annotations.Test;
 
 import pageObjects.ItemDetailsPage;
-import pageObjects.selectdropdown;
+import pageObjects.ProductPage;
 
 
 public class AddHighPriceItem extends BaseClass {
 	//create object
-   selectdropdown selectdropdownpage;
+   ProductPage selectdropdownpage;
    ItemDetailsPage itemDetailsPage;
 	
-	@Test()
-	private void performlogin() throws InterruptedException {
-		loginTestCase();
-	}
+   /*
+    * 1.verify Title
+    * 2.Click on dropdown
+    * 3.select high to low
+    * 4.fetch price of item 
+    * 5.click on add to cart button
+    */
 	
 	
 	@Test()
@@ -28,21 +33,22 @@ public class AddHighPriceItem extends BaseClass {
 			System.out.println("title is wrong");
 			Assert.assertTrue(false);
 		}
-		selectdropdownpage = new selectdropdown();
+		selectdropdownpage = new ProductPage();
 		selectdropdownpage.selectDropdown();
 		selectdropdownpage.selectHighPriceItem();
 		System.out.println(driver.getCurrentUrl());
-//		driver.navigate().back();
+		itemDetailsPage = new ItemDetailsPage();
+		itemDetailsPage.AddtoCart();
+		itemDetailsPage.ClickonBacktoProductBtn();
+	    selectdropdownpage.GetTitleOfPage();
+	    System.out.println("**Click on back to product**");
+	    selectdropdownpage.ClickOnAddtoCart();
+	
+		
 		
 		
 	}
 	
-	@Test
-	public void Addtocart() {
-		itemDetailsPage = new ItemDetailsPage();
-		itemDetailsPage.AddtoCart();
-		
-	}
 	
 	
 

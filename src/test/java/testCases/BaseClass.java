@@ -40,6 +40,9 @@ public class BaseClass {
 		driver.get(baseurl);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		loginPage= new LoginPage();
+		loginPage.testlogin(email, password);
+		System.out.println("login success");
 		
 	}
 	

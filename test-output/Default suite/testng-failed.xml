@@ -6,7 +6,7 @@
       <class name="testCases.AddHighPriceItem">
         <methods>
           <include name="setup"/>
-          <include name="Addtocart"/>
+          <include name="selectDropdown"/>
           <include name="Teardown"/>
         </methods>
       </class> <!-- testCases.AddHighPriceItem -->

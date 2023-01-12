@@ -1,3 +1,8 @@
+/*
+ * fetch highest price details
+ * click on add to cart button 
+ */
+
 package pageObjects;
 
 import org.openqa.selenium.WebElement;
@@ -19,11 +24,18 @@ public class ItemDetailsPage extends BaseClass {
 	@FindBy(className  = "inventory_details_price")
 	WebElement fetchitemprice;
 	
+	@FindBy(id = "back-to-products")
+	WebElement clickonBacktoProductBtn;
+	
 	
 	public void AddtoCart() {
 		waitForWebelement(fetchitemprice);
 		System.out.println(fetchitemprice.getText());
 		addtocartbuttonElement.click();
+	}
+	
+	public void ClickonBacktoProductBtn() {
+		clickonBacktoProductBtn.click();
 	}
 
 }
