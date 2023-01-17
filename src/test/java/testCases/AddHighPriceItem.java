@@ -40,9 +40,10 @@ public class AddHighPriceItem extends BaseClass {
 		itemDetailsPage = new ItemDetailsPage();
 		itemDetailsPage.AddtoCart();
 		itemDetailsPage.ClickonBacktoProductBtn();
-	    selectdropdownpage.GetTitleOfPage();
-	    System.out.println("**Click on back to product**");
+//	    selectdropdownpage.GetTitleOfPage();
+	    
 	    selectdropdownpage.ClickOnAddtoCart();
+	    System.out.println("**drawer**");
 	
 		
 		

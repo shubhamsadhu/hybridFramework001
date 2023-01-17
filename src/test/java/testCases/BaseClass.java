@@ -2,6 +2,7 @@ package testCases;
 
 import java.time.Duration;
 
+import org.apache.logging.log4j.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -40,8 +41,11 @@ public class BaseClass {
 		driver.get(baseurl);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		Logger log=LogManager.getLogger("logger demo");
 		loginPage= new LoginPage();
 		loginPage.testlogin(email, password);
+		log.info("Test login");
+		log.debug("debug message");
 		System.out.println("login success");
 		
 	}
