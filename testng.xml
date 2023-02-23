@@ -10,6 +10,7 @@
     <test thread-count="5" name="add high price item to cart Test">
     <classes>
       <class name="testCases.AddHighPriceItem"/>
+      <class name="testCases.LoginTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -10,8 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import pageObjects.LoginPage;
 import utils.ReadConfig;
@@ -26,7 +26,7 @@ public class BaseClass {
 	public static WebDriver driver;
 	public LoginPage loginPage;
 	
-	@BeforeClass
+	@BeforeMethod
 	//select browser via TestNG.xml 
 	public void setup() throws InterruptedException {
 		String br ="chrome";
@@ -46,23 +46,16 @@ public class BaseClass {
 		loginPage.testlogin(email, password);
 		log.info("Test login");
 		log.debug("debug message");
-		System.out.println("login success");
 		
 	}
 	
 	
-	@AfterClass
+	@AfterMethod
 	public void Teardown() {
 		System.out.println("Browser Closed");
 		driver.quit();
 	}
 	
-	public  void loginTestCase() throws InterruptedException {
-		loginPage= new LoginPage();
-		Thread.sleep(2);
-		loginPage.testlogin(email, password);
-		System.out.println("login success");
-	}
 	
 	
 	public void waitForAppear(By findby) {

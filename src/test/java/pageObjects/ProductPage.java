@@ -12,26 +12,40 @@ import testCases.BaseClass;
 //product page is a home of this application
 public class ProductPage extends BaseClass {
    Select select;
+   Select select1;
 	JavascriptExecutor jsExecutor=(JavascriptExecutor)driver;
 	
 	WebElement selectdroppdownElement = driver.findElement(By.xpath("//select[@class='product_sort_container']"));
 	WebElement highestPriceItemElement = driver.findElement(By.xpath("//div/a[@id='item_5_title_link']"));
 	WebElement getheader=driver.findElement(By.xpath("//div/span[@class='title']"));
+	WebElement lowestPriceItemElement = driver.findElement(By.xpath("//div/a[@id='item_2_title_link']"));
 	
 	
 	
-	
+	//
 	public void selectDropdown() {
 		select = new Select(selectdroppdownElement);
-		waitForWebelement(highestPriceItemElement);
 		select.selectByValue("hilo");
-		System.out.println("----Select high to low-------");
 	}
 	
-	public void selectHighPriceItem() throws InterruptedException {
+	//filter item from low to high
+	public void selectlowtohigh() throws InterruptedException {
 		Thread.sleep(3);
+		select1 = new Select(selectdroppdownElement);
+		select1.selectByValue("lohi");
+	}
+	
+	
+	//click on item after filter
+	public void selectHighPriceItem() throws InterruptedException {
+		waitForWebelement(highestPriceItemElement);
 		highestPriceItemElement.click();
-		System.out.println("high price item is selected");
+	}
+	
+	//click on item after filter
+	public void selectLowPriceItem() throws InterruptedException {
+		waitForWebelement(lowestPriceItemElement);
+		lowestPriceItemElement.click();
 	}
 	
 	public void ClickOnAddtoCart() {
