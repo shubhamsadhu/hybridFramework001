@@ -2,11 +2,11 @@ package testCases;
 
 import java.time.Duration;
 
-import org.apache.logging.log4j.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -32,7 +32,9 @@ public class BaseClass {
 		String br ="chrome";
 		
 		if(br.equalsIgnoreCase("chrome")) {
-			driver= new ChromeDriver();
+			ChromeOptions opt=new ChromeOptions();
+			opt.addArguments("--remote-allow-origins=*");
+			driver= new ChromeDriver(opt);
 		}else if(br.equalsIgnoreCase("edge")) {
 			driver= new EdgeDriver();
 		}else{
@@ -41,11 +43,9 @@ public class BaseClass {
 		driver.get(baseurl);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-		Logger log=LogManager.getLogger("logger demo");
+//		Logger log=LogManager.getLogger("logger demo");
 		loginPage= new LoginPage();
 		loginPage.testlogin(email, password);
-		log.info("Test login");
-		log.debug("debug message");
 		
 	}
 	

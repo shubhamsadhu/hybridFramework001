@@ -48,9 +48,6 @@ public class AddHighPriceItem extends BaseClass {
 		itemDetailsPage.ClickonBacktoProductBtn();	    
 	    selectdropdownpage.ClickOnAddtoCart();
 	    System.out.println("**drawer**");
-	
-		
-		
 	}
 	
 	@Test()
@@ -58,7 +55,6 @@ public class AddHighPriceItem extends BaseClass {
 		selectdropdownpage1 = new ProductPage();
 		selectdropdownpage1.selectlowtohigh();
 		System.out.println("low to high filterd");
-		selectdropdownpage1.selectLowPriceItem();
 		
 	}
 	

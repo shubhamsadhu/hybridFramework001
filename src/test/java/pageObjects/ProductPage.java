@@ -4,7 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 
 import org.openqa.selenium.WebElement;
-
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 
@@ -13,40 +14,52 @@ import testCases.BaseClass;
 public class ProductPage extends BaseClass {
    Select select;
    Select select1;
-	JavascriptExecutor jsExecutor=(JavascriptExecutor)driver;
+   
+   public ProductPage() {
+	   PageFactory.initElements(driver, this);
+   }
+   
+   @FindBy(xpath = "//div/button[text()=\"Open Menu\"]")
+   WebElement clickondrawerElement;
+   
+   @FindBy(xpath = "//nav/a[text()='Logout']")
+   WebElement clickonlogout;
+   
+   @FindBy(xpath = "//select[@class='product_sort_container']")
+   WebElement clickondropdown;
+   
+   @FindBy(xpath = "//div/a[@id='item_5_title_link']")
+   WebElement clickonHightolow;
+   
+   @FindBy(xpath = "//div/a[@id='item_2_title_link']")
+   WebElement clickonlowtoHigh;
+
+   JavascriptExecutor jsExecutor=(JavascriptExecutor)driver;
 	
-	WebElement selectdroppdownElement = driver.findElement(By.xpath("//select[@class='product_sort_container']"));
-	WebElement highestPriceItemElement = driver.findElement(By.xpath("//div/a[@id='item_5_title_link']"));
 	WebElement getheader=driver.findElement(By.xpath("//div/span[@class='title']"));
-	WebElement lowestPriceItemElement = driver.findElement(By.xpath("//div/a[@id='item_2_title_link']"));
 	
 	
 	
 	//
 	public void selectDropdown() {
-		select = new Select(selectdroppdownElement);
+		select = new Select(clickondropdown);
 		select.selectByValue("hilo");
 	}
 	
 	//filter item from low to high
 	public void selectlowtohigh() throws InterruptedException {
 		Thread.sleep(3);
-		select1 = new Select(selectdroppdownElement);
+		select1 = new Select(clickondropdown);
 		select1.selectByValue("lohi");
 	}
 	
 	
 	//click on item after filter
 	public void selectHighPriceItem() throws InterruptedException {
-		waitForWebelement(highestPriceItemElement);
-		highestPriceItemElement.click();
+		waitForWebelement(clickonHightolow);
+		clickonHightolow.click();
 	}
 	
-	//click on item after filter
-	public void selectLowPriceItem() throws InterruptedException {
-		waitForWebelement(lowestPriceItemElement);
-		lowestPriceItemElement.click();
-	}
 	
 	public void ClickOnAddtoCart() {
 		  try {
@@ -66,23 +79,11 @@ public class ProductPage extends BaseClass {
 	}
 	
 	
-	public void ClickOnDrower() throws InterruptedException {
-//		  new WebDriverWait(driver, Duration.ofSeconds(10)).ignoring(StaleElementReferenceException.class)
-//		    .until(ExpectedConditions.elementToBeClickable(drawer));
-	
-
-		  try {
-				WebElement drawer=driver.findElement(By.xpath("(//div/button)[1]"));
-				  drawer.click();
-			}
-			catch(org.openqa.selenium.StaleElementReferenceException ex)
-			{
-				  WebElement drawer1=driver.findElement(By.xpath("(//div/button)[1]"));
-				  drawer1.click();
-			}
-		  
-		  
-
+	public void clickondrawer() throws InterruptedException {
+		Thread.sleep(1000);
+		clickondrawerElement.click();
+		Thread.sleep(800);
+		clickonlogout.click();
 	}
 	
 	
