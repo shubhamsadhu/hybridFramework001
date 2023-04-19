@@ -4,7 +4,6 @@
  */
 
 package pageObjects;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -19,7 +18,6 @@ public class ItemDetailsPage extends BaseClass {
 	
 	@FindBy(id = "add-to-cart-sauce-labs-fleece-jacket")
 	WebElement addtocartbuttonElement;
-	
 	
 	@FindBy(className  = "inventory_details_price")
 	WebElement fetchitemprice;

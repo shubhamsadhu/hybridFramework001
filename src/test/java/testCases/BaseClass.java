@@ -46,6 +46,7 @@ public class BaseClass {
 //		Logger log=LogManager.getLogger("logger demo");
 		loginPage= new LoginPage();
 		loginPage.testlogin(email, password);
+		Thread.sleep(2000);
 		
 	}
 	

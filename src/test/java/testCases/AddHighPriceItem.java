@@ -13,9 +13,9 @@ import pageObjects.ProductPage;
 
 public class AddHighPriceItem extends BaseClass {
 	//create object
-   ProductPage selectdropdownpage;
-   ProductPage selectdropdownpage1;
-   ItemDetailsPage itemDetailsPage;
+  private ProductPage selectdropdownpage;
+  private ProductPage selectdropdownpage1;
+  private ItemDetailsPage itemDetailsPage;
 	
    /*
     * 1.verify Title
@@ -37,6 +37,7 @@ public class AddHighPriceItem extends BaseClass {
    }
 	
 	
+   
 	@Test()
 	public void selectDropdown() throws InterruptedException {
 		selectdropdownpage = new ProductPage();
