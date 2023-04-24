@@ -56,7 +56,7 @@ public class ProductPage extends BaseClass {
 	
 	//click on item after filter
 	public void selectHighPriceItem() throws InterruptedException {
-		waitForWebelement(clickonHightolow);
+		waitForAppear(clickonHightolow);
 		clickonHightolow.click();
 	}
 	

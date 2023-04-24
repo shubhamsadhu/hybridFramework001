@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testCases.AddHighPriceItem">
+      <class name="testCases.LoginTest">
         <methods>
           <include name="setup"/>
-          <include name="verifytitle"/>
-          <include name="selectlowestPriceitem"/>
-          <include name="selectDropdown"/>
+          <include name="starttest"/>
           <include name="Teardown"/>
         </methods>
-      </class> <!-- testCases.AddHighPriceItem -->
+      </class> <!-- testCases.LoginTest -->
+      <class name="pageObjects.LoginPage">
+        <methods>
+          <include name="setup"/>
+          <include name="Teardown"/>
+          <include name="testlogin"/>
+        </methods>
+      </class> <!-- pageObjects.LoginPage -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

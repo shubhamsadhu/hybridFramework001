@@ -3,6 +3,8 @@ package testCases;
 
 
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 
 import org.testng.annotations.Test;
@@ -28,11 +30,11 @@ public class AddHighPriceItem extends BaseClass {
    @Test()
    public void verifytitle() {
 		if(driver.getTitle().equals("Swag Labs")) {
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 			System.out.println(driver.getCurrentUrl());
 		}else {
 			System.out.println("title is wrong");
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		}
    }
 	

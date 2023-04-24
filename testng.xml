@@ -7,6 +7,7 @@
       <class name="testCases.AddHighPriceItem"/>
       <class name="testCases.LoginTest"/>
       <class name="testCases.LogOut"/>
+      <class name="testCases.CheckOutAndPurchaseItem"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

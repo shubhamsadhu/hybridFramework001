@@ -59,15 +59,11 @@ public class BaseClass {
 	
 	
 	
-	public void waitForAppear(By findby) {
+	public void waitForAppear(WebElement element1) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(findby));
+		wait.until(ExpectedConditions.visibilityOf(element1));
 	}
 	
-	public void waitForWebelement(WebElement findby) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(findby));
-	}
 	
 
 }

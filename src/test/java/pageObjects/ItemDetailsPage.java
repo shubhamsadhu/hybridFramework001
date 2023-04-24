@@ -27,7 +27,7 @@ public class ItemDetailsPage extends BaseClass {
 	
 	
 	public void AddtoCart() {
-		waitForWebelement(fetchitemprice);
+		waitForAppear(fetchitemprice);
 		System.out.println(fetchitemprice.getText());
 		addtocartbuttonElement.click();
 	}

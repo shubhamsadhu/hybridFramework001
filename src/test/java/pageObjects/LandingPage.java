@@ -28,7 +28,7 @@ public class LandingPage extends BaseClass{
 		addToCartBtn.click();
 		verifyPageHeader.click();
 		System.out.println(verifyPageHeader.getText());
-		waitForWebelement(CheckoutBtn);
+		waitForAppear(CheckoutBtn);
 		CheckoutBtn.click();
 	}
 	
