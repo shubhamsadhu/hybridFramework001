@@ -40,6 +40,7 @@ public class BaseClass {
 		}else{
 			System.out.println("Invalid browser name");
 		}
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
 		driver.get(baseurl);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
@@ -60,7 +61,7 @@ public class BaseClass {
 	
 	
 	public void waitForAppear(WebElement element1) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOf(element1));
 	}
 	

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>5/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Apr 25 00:08:16 IST 2023</td>
+<td>Started on:</td><td>Wed Apr 26 22:12:32 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>90 seconds (90011 ms)</td>
+<tr><td>Total time:</td><td>81 seconds (81599 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,7 +76,7 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='testCases.LoginTest.starttest()'><b>starttest</b><br>Test class: testCases.LoginTest</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//div/input)[1]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//div/input)[1]&apos; (tried for 20 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
 	at testCases.BaseClass.waitForAppear(BaseClass.java:64)
@@ -84,14 +84,14 @@ function toggleAllBoxes() {
 	at testCases.LoginTest.starttest(LoginTest.java:14)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div/input)[1]&quot;}
-  (Session info: chrome=112.0.5615.137)
+  (Session info: chrome=112.0.5615.138)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.17&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bd36ce5d5281d730bd11e57d22b6bc9d, findElement {using=xpath, value=(//div/input)[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.137, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\SHUBHA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62602}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62602/devtoo..., se:cdpVersion: 112.0.5615.137, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bd36ce5d5281d730bd11e57d22b6bc9d
+Command: [9c12010bc7ef294ea06a2c6d9f910a11, findElement {using=xpath, value=(//div/input)[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\SHUBHA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60007}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60007/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c12010bc7ef294ea06a2c6d9f910a11
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -112,8 +112,8 @@ Session ID: bd36ce5d5281d730bd11e57d22b6bc9d
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
 	... 31 more
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace886510498", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace886510498'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//div/input)[1]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace875456779", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace875456779'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//div/input)[1]&apos; (tried for 20 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
 	at testCases.BaseClass.waitForAppear(BaseClass.java:64)
@@ -148,14 +148,14 @@ Session ID: bd36ce5d5281d730bd11e57d22b6bc9d
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div/input)[1]&quot;}
-  (Session info: chrome=112.0.5615.137)
+  (Session info: chrome=112.0.5615.138)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.17&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bd36ce5d5281d730bd11e57d22b6bc9d, findElement {using=xpath, value=(//div/input)[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.137, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\SHUBHA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62602}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62602/devtoo..., se:cdpVersion: 112.0.5615.137, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bd36ce5d5281d730bd11e57d22b6bc9d
+Command: [9c12010bc7ef294ea06a2c6d9f910a11, findElement {using=xpath, value=(//div/input)[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\SHUBHA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60007}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60007/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c12010bc7ef294ea06a2c6d9f910a11
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -181,7 +181,7 @@ Session ID: bd36ce5d5281d730bd11e57d22b6bc9d
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
 	... 31 more
 </pre></div></td>
-<td>13</td>
+<td>23</td>
 <td>testCases.LoginTest@17fc391b</td></tr>
 <tr>
 <td title='pageObjects.LoginPage.testlogin()'><b>testlogin</b><br>Test class: pageObjects.LoginPage</td>
@@ -189,8 +189,8 @@ Session ID: bd36ce5d5281d730bd11e57d22b6bc9d
 Cannot inject @Test annotated Method [testlogin] with [class java.lang.String, class java.lang.String].
 For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1680503330", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1680503330'><pre>org.testng.TestNGException: 
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2100440237", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2100440237'><pre>org.testng.TestNGException: 
 Cannot inject @Test annotated Method [testlogin] with [class java.lang.String, class java.lang.String].
 For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
 	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:436)
@@ -232,12 +232,7 @@ For more information on native dependency injection please refer to https://test
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCases.CheckOutAndPurchaseItem.checkItemInCart()'><b>checkItemInCart</b><br>Test class: testCases.CheckOutAndPurchaseItem</td>
-<td></td>
-<td>0</td>
-<td>testCases.CheckOutAndPurchaseItem@609e8838</td></tr>
-<tr>
-<td title='testCases.AddHighPriceItem.selectDropdown()'><b>selectDropdown</b><br>Test class: testCases.AddHighPriceItem</td>
+<td title='testCases.AddHighPriceItem.selectlowestPriceitem()'><b>selectlowestPriceitem</b><br>Test class: testCases.AddHighPriceItem</td>
 <td></td>
 <td>0</td>
 <td>testCases.AddHighPriceItem@4082ba93</td></tr>
@@ -252,10 +247,15 @@ For more information on native dependency injection please refer to https://test
 <td>0</td>
 <td>testCases.AddHighPriceItem@4082ba93</td></tr>
 <tr>
-<td title='testCases.AddHighPriceItem.selectlowestPriceitem()'><b>selectlowestPriceitem</b><br>Test class: testCases.AddHighPriceItem</td>
+<td title='testCases.AddHighPriceItem.selectDropdown()'><b>selectDropdown</b><br>Test class: testCases.AddHighPriceItem</td>
+<td></td>
+<td>1</td>
+<td>testCases.AddHighPriceItem@4082ba93</td></tr>
+<tr>
+<td title='testCases.CheckOutAndPurchaseItem.checkItemInCart()'><b>checkItemInCart</b><br>Test class: testCases.CheckOutAndPurchaseItem</td>
 <td></td>
 <td>0</td>
-<td>testCases.AddHighPriceItem@4082ba93</td></tr>
+<td>testCases.CheckOutAndPurchaseItem@609e8838</td></tr>
 </table><p>
 </body>
 </html>
