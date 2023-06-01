@@ -19,7 +19,9 @@ public class ReadConfig {
 		} catch (Exception e) {
 			System.out.println("Exception is"+e.getMessage());
 		}
+		
 	}
+	
 	
 	public String readurlfromConfigFile() {
 		String readurl = propsProperties.getProperty("baseUrl");
