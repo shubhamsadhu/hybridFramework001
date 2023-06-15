@@ -1,6 +1,7 @@
 /*
  * fetch highest price details
  * click on add to cart button 
+ * write script to test all links
  */
 
 package pageObjects;
