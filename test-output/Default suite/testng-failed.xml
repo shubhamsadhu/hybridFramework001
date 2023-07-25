@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.AddHighPriceItem">
+      <class name="testCases.CheckOutAndPurchaseItem">
         <methods>
           <include name="setup"/>
-          <include name="verifytitle"/>
-          <include name="selectlowestPriceitem"/>
-          <include name="selectDropdown"/>
           <include name="Teardown"/>
+          <include name="checkItemInCart"/>
         </methods>
-      </class> <!-- testCases.AddHighPriceItem -->
+      </class> <!-- testCases.CheckOutAndPurchaseItem -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -11,6 +11,7 @@ public class CheckOutAndPurchaseItem extends BaseClass {
 	@Test
 	public void checkItemInCart() {
 		landingPage = new LandingPage();
+		logger.info("Test check item to cart");
 		landingPage.checkIteminCart();
 	}
 }
