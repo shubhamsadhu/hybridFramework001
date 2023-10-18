@@ -26,7 +26,7 @@ public class BaseClass {
 	public String baseurl = readconfig.readurlfromConfigFile();
 	public String email = readconfig.readusernamefromConfigFile();
 	public String password =readconfig.readpasswordfromConfigFile() ;
-	public static Logger logger = LogManager.getLogger("LoggerDemo");
+	Logger logger = LogManager.getLogger("LoggerDemo");
 	public static WebDriver driver;
 	public LoginPage loginPage;
 	
@@ -52,6 +52,7 @@ public class BaseClass {
 //		Logger log=LogManager.getLogger("logger demo");
 		loginPage= new LoginPage();
 		loginPage.testlogin(email, password);
+		logger.debug("enter username password");
 		Thread.sleep(2000);
 		
 	}

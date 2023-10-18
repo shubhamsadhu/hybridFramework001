@@ -4,6 +4,8 @@
 
 package corejava;
 
+import java.util.Scanner;
+
 public class Interface {
 
 	public static void main(String[] args) {
@@ -27,8 +29,7 @@ class Television implements Remote{
 
 	
 	public void powerOn() {
-		System.out.println("powerOn");
-		
+		Scanner takeinputScanner = new Scanner(System.in);
 	}
 
 }

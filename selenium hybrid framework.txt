@@ -19,3 +19,19 @@ phase 1 : implementation
 -add extent report
 -create data driven test case
 add new test case
+
+
+
+
+1.create a page object page
+2.create a page object class inside page object package.
+3.extends that class with base class.
+4.create contructor inside class to initialize page factory.
+5.then write webelement & create methods to perform operations.
+
+1.Create a base class
+2.use beforeMethod anotation in setup method
+3.use after method annotation in teardown method
+4.write all reusable methods in base class
+
+1

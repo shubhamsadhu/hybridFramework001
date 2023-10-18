@@ -3,6 +3,7 @@ package testCases;
 
 
 
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.testng.Assert;
@@ -26,6 +27,13 @@ public class AddHighPriceItem extends BaseClass {
     * 4.fetch price of item 
     * 5.click on add to cart button
     */
+  
+  @BeforeMethod
+  public void initialize() {
+	  selectdropdownpage = new ProductPage();
+	  itemDetailsPage = new ItemDetailsPage();
+	  selectdropdownpage1 = new ProductPage();
+  }
    
    @Test()
    public void verifytitle() {
@@ -42,11 +50,10 @@ public class AddHighPriceItem extends BaseClass {
    
 	@Test()
 	public void selectDropdown() throws InterruptedException {
-		selectdropdownpage = new ProductPage();
+		
 		selectdropdownpage.selectDropdown();
 		selectdropdownpage.selectHighPriceItem();
 		System.out.println(driver.getCurrentUrl());
-		itemDetailsPage = new ItemDetailsPage();
 		itemDetailsPage.AddtoCart();
 		itemDetailsPage.ClickonBacktoProductBtn();	    
 	    selectdropdownpage.ClickOnAddtoCart();
@@ -55,7 +62,7 @@ public class AddHighPriceItem extends BaseClass {
 	
 	@Test()
   public void selectlowestPriceitem() throws InterruptedException {
-		selectdropdownpage1 = new ProductPage();
+
 		selectdropdownpage1.selectlowtohigh();
 		System.out.println("low to high filterd");
 		
