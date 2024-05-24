@@ -2,16 +2,22 @@ package pageObjects;
 
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import testCases.BaseClass;
 
-public class LoginPage extends BaseClass {
+
+//login page is a landing page in this website
+public class LoginPage{
+	WebDriver driver;
 	
-	
-	public LoginPage() {
+	public LoginPage(WebDriver driver) {
+		
+		super();
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	

@@ -50,7 +50,7 @@ public class BaseClass {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 //		Logger log=LogManager.getLogger("logger demo");
-		loginPage= new LoginPage();
+		loginPage= new LoginPage(driver);
 		loginPage.testlogin(email, password);
 		logger.debug("enter username password");
 		Thread.sleep(2000);
@@ -66,9 +66,11 @@ public class BaseClass {
 	
 	
 	
-	public void waitForAppear(WebElement element1) {
+	public void waitForAppear(By checkoutBtn) {  //By is a return type here
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.visibilityOf(element1));
+		//wait.until(ExpectedConditions.visibilityOf(element1));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(checkoutBtn));
+		
 	}
 	
 	
