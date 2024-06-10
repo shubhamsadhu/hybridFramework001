@@ -5,10 +5,8 @@
     <classes>
       <class name="testCases.AddHighPriceItem">
         <methods>
-          <include name="initialize"/>
           <include name="setup"/>
-          <include name="verifytitle"/>
-          <include name="selectlowestPriceitem"/>
+          <include name="objectinitialize"/>
           <include name="selectDropdown"/>
           <include name="Teardown"/>
         </methods>

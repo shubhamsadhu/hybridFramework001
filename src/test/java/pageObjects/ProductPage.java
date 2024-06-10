@@ -2,20 +2,24 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-
+import abstractcomponents.ReusableComponents;
 import testCases.BaseClass;
 //product page is a home of this application
-public class ProductPage extends BaseClass {
+public class ProductPage extends ReusableComponents {
    Select select;
    Select select1;
    
-   public ProductPage() {
+   WebDriver driver;
+   
+   public ProductPage(WebDriver driver) {
+	   super(driver);
+	   this.driver=driver;
 	   PageFactory.initElements(driver, this);
    }
    
@@ -34,9 +38,6 @@ public class ProductPage extends BaseClass {
    @FindBy(xpath = "//div/a[@id='item_2_title_link']")
    WebElement clickonlowtoHigh;
 
-   JavascriptExecutor jsExecutor=(JavascriptExecutor)driver;
-	
-	WebElement getheader=driver.findElement(By.xpath("//div/span[@class='title']"));
 	
 	
 	
@@ -56,7 +57,7 @@ public class ProductPage extends BaseClass {
 	
 	//click on item after filter
 	public void selectHighPriceItem() throws InterruptedException {
-		waitForAppear(clickonHightolow);
+		waitforElementAppear(clickonHightolow);
 		clickonHightolow.click();
 	}
 	

@@ -12,10 +12,14 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
+import pageObjects.ItemDetailsPage;
 import pageObjects.LoginPage;
+import pageObjects.ProductPage;
 import utils.Logger1;
 import utils.ReadConfig;
 
@@ -29,10 +33,12 @@ public class BaseClass {
 	Logger logger = LogManager.getLogger("LoggerDemo");
 	public static WebDriver driver;
 	public LoginPage loginPage;
+
 	
-	@BeforeMethod
+
 	//select browser via TestNG.xml 
-	public void setup() throws InterruptedException {
+	@BeforeClass
+	public WebDriver setup() throws InterruptedException {
 		String br ="chrome";
 		
 		if(br.equalsIgnoreCase("chrome")) {
@@ -44,7 +50,8 @@ public class BaseClass {
 		}else{
 			System.out.println("Invalid browser name");
 		}
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
+		
+		
 		driver.get(baseurl);
 		logger.info("test logger");
 		driver.manage().window().maximize();
@@ -54,24 +61,21 @@ public class BaseClass {
 		loginPage.testlogin(email, password);
 		logger.debug("enter username password");
 		Thread.sleep(2000);
+		return driver;
 		
 	}
 	
+
 	
-	@AfterMethod
+	
+	@AfterClass
 	public void Teardown() {
 		System.out.println("Browser Closed");
 		driver.quit();
 	}
 	
 	
-	
-	public void waitForAppear(By checkoutBtn) {  //By is a return type here
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		//wait.until(ExpectedConditions.visibilityOf(element1));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(checkoutBtn));
-		
-	}
+
 	
 	
 

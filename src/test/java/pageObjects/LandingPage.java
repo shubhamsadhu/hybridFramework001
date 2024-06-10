@@ -1,14 +1,20 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import abstractcomponents.ReusableComponents;
 import testCases.BaseClass;
 
-public class LandingPage extends BaseClass{
+public class LandingPage extends ReusableComponents{
 
-	public LandingPage() {
+	WebDriver driver;
+	public LandingPage(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -24,11 +30,13 @@ public class LandingPage extends BaseClass{
 	@FindBy(xpath = "//div/button[text()='Checkout']")
 	WebElement CheckoutBtn;
 	
+	By resultBy = By.xpath("\"//div/button[text()='Checkout']\"");
+	
 	public void checkIteminCart() {
 		addToCartBtn.click();
 		verifyPageHeader.click();
 		System.out.println(verifyPageHeader.getText());
-		waitForAppear(CheckoutBtn);
+		waitforvisiblityoflocator(resultBy);
 		CheckoutBtn.click();
 	}
 	

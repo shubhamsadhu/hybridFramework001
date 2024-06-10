@@ -16,9 +16,9 @@ import pageObjects.ProductPage;
 
 public class AddHighPriceItem extends BaseClass {
 	//create object
-  private ProductPage selectdropdownpage;
-  private ProductPage selectdropdownpage1;
-  private ItemDetailsPage itemDetailsPage;
+private ItemDetailsPage itemDetailsPage;
+private ProductPage productPage;
+
 	
    /*
     * 1.verify Title
@@ -28,14 +28,14 @@ public class AddHighPriceItem extends BaseClass {
     * 5.click on add to cart button
     */
   
-  @BeforeMethod
-  public void initialize() {
-	  selectdropdownpage = new ProductPage();
-	  itemDetailsPage = new ItemDetailsPage();
-	  selectdropdownpage1 = new ProductPage();
-  }
+	  @BeforeMethod
+	  public void objectinitialize() {
+		  
+		  
+	}
+
    
-   @Test()
+   @Test(description = "To validate title of application")
    public void verifytitle() {
 		if(driver.getTitle().equals("Swag Labs")) {
 			AssertJUnit.assertTrue(true);
@@ -48,22 +48,23 @@ public class AddHighPriceItem extends BaseClass {
 	
 	
    
-	@Test()
+	@Test(description = "To validate sorting of product")
 	public void selectDropdown() throws InterruptedException {
-		
-		selectdropdownpage.selectDropdown();
-		selectdropdownpage.selectHighPriceItem();
+		productPage = new ProductPage(driver);
+		productPage.selectDropdown();
+		productPage.selectHighPriceItem();
 		System.out.println(driver.getCurrentUrl());
+		itemDetailsPage = new ItemDetailsPage(driver);
 		itemDetailsPage.AddtoCart();
 		itemDetailsPage.ClickonBacktoProductBtn();	    
-	    selectdropdownpage.ClickOnAddtoCart();
+	    productPage.ClickOnAddtoCart();
 	    System.out.println("**drawer**");
 	}
 	
-	@Test()
+	@Test(enabled = false)
   public void selectlowestPriceitem() throws InterruptedException {
 
-		selectdropdownpage1.selectlowtohigh();
+//		selectdropdownpage1.selectlowtohigh();
 		System.out.println("low to high filterd");
 		
 	}

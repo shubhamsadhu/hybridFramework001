@@ -1,6 +1,9 @@
 package pageObjects;
 
 import org.testng.annotations.Test;
+
+import abstractcomponents.ReusableComponents;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,18 +14,20 @@ import testCases.BaseClass;
 
 
 //login page is a landing page in this website
-public class LoginPage{
+public class LoginPage extends ReusableComponents{
 	WebDriver driver;
 	
 	public LoginPage(WebDriver driver) {
 		
-		super();
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 	@FindBy(xpath = "(//div/input)[1]")
 	WebElement emailtextfieldElement;
+	
+	By emailtextfieldBy = By.xpath("(//div/input)[1]");
 	
 	@FindBy(id  = "password")
 	WebElement passwordElement;
@@ -34,10 +39,11 @@ public class LoginPage{
 	@Test
 	public void testlogin(String email, String Password) throws InterruptedException {
 		Thread.sleep(5);
-		waitForAppear(emailtextfieldElement);
+		waitforElementAppear(emailtextfieldElement);
 		emailtextfieldElement.sendKeys(email);
 		passwordElement.sendKeys(Password);
 		loginbtnElement.click();
 	}
+
 
 }

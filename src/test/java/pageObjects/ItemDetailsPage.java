@@ -4,15 +4,21 @@
  */
 
 package pageObjects;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import testCases.BaseClass;
+import abstractcomponents.ReusableComponents;
 
-public class ItemDetailsPage extends BaseClass {
+
+public class ItemDetailsPage extends ReusableComponents  {
 	
-	public ItemDetailsPage() {
+	WebDriver driver;
+	
+	public ItemDetailsPage(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -27,7 +33,7 @@ public class ItemDetailsPage extends BaseClass {
 	
 	
 	public void AddtoCart() {
-		waitForAppear(fetchitemprice);
+		waitforElementAppear(fetchitemprice);
 		System.out.println(fetchitemprice.getText());
 		addtocartbuttonElement.click();
 	}
