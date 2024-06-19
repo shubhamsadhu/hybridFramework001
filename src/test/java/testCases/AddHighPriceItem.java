@@ -50,11 +50,11 @@ private ProductPage productPage;
    
 	@Test(description = "To validate sorting of product")
 	public void selectDropdown() throws InterruptedException {
-		productPage = new ProductPage(driver);
+		productPage = new ProductPage();
 		productPage.selectDropdown();
 		productPage.selectHighPriceItem();
 		System.out.println(driver.getCurrentUrl());
-		itemDetailsPage = new ItemDetailsPage(driver);
+		itemDetailsPage = new ItemDetailsPage();
 		itemDetailsPage.AddtoCart();
 		itemDetailsPage.ClickonBacktoProductBtn();	    
 	    productPage.ClickOnAddtoCart();

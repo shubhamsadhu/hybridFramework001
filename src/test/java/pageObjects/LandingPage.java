@@ -9,12 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 import abstractcomponents.ReusableComponents;
 import testCases.BaseClass;
 
-public class LandingPage extends ReusableComponents{
+public class LandingPage extends BaseClass{
 
-	WebDriver driver;
-	public LandingPage(WebDriver driver) {
-		super(driver);
-		this.driver = driver;
+	
+	public LandingPage() {
 		PageFactory.initElements(driver, this);
 	}
 	

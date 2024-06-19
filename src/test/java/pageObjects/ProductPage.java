@@ -11,15 +11,12 @@ import org.openqa.selenium.support.ui.Select;
 import abstractcomponents.ReusableComponents;
 import testCases.BaseClass;
 //product page is a home of this application
-public class ProductPage extends ReusableComponents {
+public class ProductPage extends BaseClass {
    Select select;
    Select select1;
    
-   WebDriver driver;
    
-   public ProductPage(WebDriver driver) {
-	   super(driver);
-	   this.driver=driver;
+   public ProductPage() {
 	   PageFactory.initElements(driver, this);
    }
    

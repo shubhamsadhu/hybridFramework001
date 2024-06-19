@@ -11,7 +11,7 @@ public class LogOut extends BaseClass {
 	
 	@Test()
 	public void logout() throws InterruptedException {
-		productPage = new ProductPage(driver);
+		productPage = new ProductPage();
 		productPage.clickondrawer();
 	}
 }

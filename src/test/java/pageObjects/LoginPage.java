@@ -14,13 +14,11 @@ import testCases.BaseClass;
 
 
 //login page is a landing page in this website
-public class LoginPage extends ReusableComponents{
-	WebDriver driver;
+public class LoginPage extends BaseClass{
 	
-	public LoginPage(WebDriver driver) {
+	public LoginPage() {
 		
-		super(driver);
-		this.driver = driver;
+		
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -37,12 +35,13 @@ public class LoginPage extends ReusableComponents{
 	
 	
 	@Test
-	public void testlogin(String email, String Password) throws InterruptedException {
+	public LandingPage testlogin(String email, String Password) throws InterruptedException {
 		Thread.sleep(5);
 		waitforElementAppear(emailtextfieldElement);
 		emailtextfieldElement.sendKeys(email);
 		passwordElement.sendKeys(Password);
 		loginbtnElement.click();
+		return new LandingPage();
 	}
 
 

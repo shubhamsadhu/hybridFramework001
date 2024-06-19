@@ -57,7 +57,7 @@ public class BaseClass {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 //		Logger log=LogManager.getLogger("logger demo");
-		loginPage= new LoginPage(driver);
+		loginPage= new LoginPage();
 		loginPage.testlogin(email, password);
 		logger.debug("enter username password");
 		Thread.sleep(2000);
@@ -72,6 +72,16 @@ public class BaseClass {
 	public void Teardown() {
 		System.out.println("Browser Closed");
 		driver.quit();
+	}
+	
+	public static void waitforElementAppear(WebElement emailtextfieldElement) {
+	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(8));
+	wait.until(ExpectedConditions.visibilityOf(emailtextfieldElement));
+	}
+	
+	public static void waitforvisiblityoflocator(By emailtextfieldElement) {
+	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(8));
+	wait.until(ExpectedConditions.visibilityOfElementLocated(emailtextfieldElement));
 	}
 	
 	
