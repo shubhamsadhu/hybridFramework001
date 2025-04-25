@@ -34,4 +34,11 @@ add new test case
 3.use after method annotation in teardown method
 4.write all reusable methods in base class
 
-1
+//Assertions
+use to test validations
+-Types of Assertions
+	Hard Assertions : If the assertion is failed then test will be stop
+	soft Assertions : If the assetion is failed 
+	
+1.Assert.assertEquals() //multiple types are available like a int, double, boolean, string 
+2.
